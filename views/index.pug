@@ -1,0 +1,9 @@
+extends layout 
+
+block content
+    h1.bg-info.p-2.text-white.text-center #{title}
+    a.mt-3.ml-4.p-2.btn.btn-info(href="employees/add") Add Employee
+    ul.list-group.m-4
+        each employee, x in employeeslist
+            li.list-group.item.card.card-body.p-2
+                a.text-info(href="/employees/"+employee._id)= employee.fullname 

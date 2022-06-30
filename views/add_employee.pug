@@ -1,0 +1,10 @@
+extends layout 
+
+block content
+    h1.bg-info.p-2.text-white.text-center #{title}
+    form.card.card-body.m-4.p-2(action="/employees/add", method="POST") 
+        label Fullname: 
+        input.form-control.mb-2(type="text", name="fullname" required)
+        label Position: 
+        input.form-control.mb-2(type="text", name="position" required)
+        input.btn.btn-info.btn-block(type="submit", value="submit")

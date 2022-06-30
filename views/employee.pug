@@ -1,0 +1,10 @@
+extends layout 
+
+block content
+    h1.bg-info.p-2.text-white.text-center #{title}
+    .card.card-body.m-4.row.justify-content-center
+        h3=employee.fullname 
+        p=employee.position
+        hr
+        a.btn.btn-dark.mg-3.mb-2(href="/employee/edit/"+employee._id) Edit 
+        a.btn.btn-danger.mg-3(href="/employee/delete/"+employee._id) Delete
